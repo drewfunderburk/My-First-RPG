@@ -131,8 +131,5 @@ int main()
 		break;
 	}
 
-	delete player;
-	delete enemy;
-
 	system("pause");
 }
