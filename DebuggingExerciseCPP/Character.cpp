@@ -12,6 +12,11 @@ Character::Character(const char* name, float health, float damage, float defense
 	m_defense = defense;
 }
 
+Character::~Character()
+{
+	delete m_name;
+}
+
 float Character::takeDamage(float damage)
 {
 	float totalDamage = damage - m_defense;
@@ -20,7 +25,7 @@ float Character::takeDamage(float damage)
 		totalDamage = 0;
 
 	m_health -= totalDamage;
-	return damage;
+	return totalDamage;
 }
 
 float Character::attack(Character* other)

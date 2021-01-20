@@ -8,6 +8,7 @@ class Character
 public:
 	Character();
 	Character(const char* name, float health, float damage, float defense);
+	~Character();
 
 	/// <summary>
 	/// Subtracts health by the given damage amount.
